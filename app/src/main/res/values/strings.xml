@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ImageCompressSample</string>
+    <string name="request_permission_message">Please allow Camera and Storage permission.</string>
+    <string name="exit_message">Permission denied, app is close.</string>
+</resources>
