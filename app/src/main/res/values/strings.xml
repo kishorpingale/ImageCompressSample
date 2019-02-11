@@ -2,4 +2,10 @@
     <string name="app_name">ImageCompressSample</string>
     <string name="request_permission_message">Please allow Camera and Storage permission.</string>
     <string name="exit_message">Permission denied, app is close.</string>
+    <string name="capture_image">Capture Image</string>
+    <string name="compress_image">Compress Image</string>
+    <string name="image_size_limit_exceed">Capture image size limit is exceed. Please capture image
+                less than 6MB.</string>
+    <string name="actual_file_size_text">Actual File size is in mb </string>
+    <string name="compress_file_size_text">Compress File size is in mb </string>
 </resources>

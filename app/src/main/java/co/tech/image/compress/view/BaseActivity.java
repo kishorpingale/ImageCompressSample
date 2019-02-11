@@ -3,6 +3,7 @@ package co.tech.image.compress.view;
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -51,16 +52,16 @@ public class BaseActivity extends AppCompatActivity {
     /**
      * To check whether the user allowed the required permissions or not
      */
-    protected boolean checkPermission(Activity currentActivity) {
+    protected boolean checkPermission(Context context) {
 
         //Camera check self permission
-        int cameraPermission = ContextCompat.checkSelfPermission(currentActivity,
+        int cameraPermission = ContextCompat.checkSelfPermission(context,
                 Manifest.permission.CAMERA);
         //Write external storage check self permission
-        int writeStoragePermission = ContextCompat.checkSelfPermission(currentActivity,
+        int writeStoragePermission = ContextCompat.checkSelfPermission(context,
                 Manifest.permission.WRITE_EXTERNAL_STORAGE);
         //Read external storage check self permission
-        int readStoragePermission = ContextCompat.checkSelfPermission(currentActivity,
+        int readStoragePermission = ContextCompat.checkSelfPermission(context,
                 Manifest.permission.READ_EXTERNAL_STORAGE);
         // Check Camera & Write, Read external storage permissions are granted or not
         if (cameraPermission == PackageManager.PERMISSION_GRANTED && writeStoragePermission ==
