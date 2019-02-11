@@ -29,7 +29,7 @@ public class CompressImageActivity extends BaseActivity implements MainActivityP
     private final String mLOGTAG = CompressImageActivity.class.getSimpleName();
     private String mImagePath = null;
     private ImageView mImageView;
-    private TextView mSizeTextView;
+//    private TextView mSizeTextView;
     private MainActivityPresenter mainActivityPresenter;
     private File compressFile;
 
@@ -39,7 +39,7 @@ public class CompressImageActivity extends BaseActivity implements MainActivityP
         setContentView(R.layout.activity_compress_image);
         mainActivityPresenter = new MainActivityPresenter(this);
         mImageView = findViewById(R.id.imageView_compress_img);
-        mSizeTextView = findViewById(R.id.textView_compress_size);
+//        mSizeTextView = findViewById(R.id.textView_compress_size);
         Intent intent = getIntent();
         if (intent != null && intent.hasExtra(Utils.IMAGE_PATH)) {
             mImagePath = intent.getStringExtra(Utils.IMAGE_PATH);
@@ -61,7 +61,7 @@ public class CompressImageActivity extends BaseActivity implements MainActivityP
                     new RequestOptions().placeholder(
                             R.drawable.ic_launcher_foreground)).into(mImageView);
 
-            mSizeTextView.setText(getString(R.string.compress_file_size_text) + "000 ");
+//            mSizeTextView.setText(getString(R.string.compress_file_size_text) + "000 ");
         }
     }
 
